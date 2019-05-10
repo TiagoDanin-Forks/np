@@ -22,7 +22,7 @@ const pkgPublish = (pkgManager, options) => {
 	if (options.publishScoped) {
 		args.push('--access', 'public');
 	}
-
+	args.push('--dry-run')
 	return execa(pkgManager, args);
 };
 
